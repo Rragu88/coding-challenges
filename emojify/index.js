@@ -21,4 +21,10 @@ function emojifyWord(word){
     }
 }
 
-emojifyWord(':dog:');
+function emojifyPhrase(phrase) {
+    const phraseArr = phrase.split(' ');
+    const newPhrase = phraseArr.map(word => emojifyWord(word)).join(' ');
+    console.log(newPhrase);
+}
+
+emojifyPhrase('I am a :dog:');
